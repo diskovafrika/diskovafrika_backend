@@ -18,7 +18,7 @@ class CountryDivision(db.Model):
     id = id = db.Column(
         db.String(length=50), primary_key=True, default=str(uuid4), unique=True)
     country_id = db.Column(
-        db.Integer, db.ForeignKey('country.id'), nullable=False)
+        db.String(length=50), db.ForeignKey('country.id'), nullable=False)
     name = db.Column(db.String(200), nullable=False)
     old_name = db.Column(db.String(200), nullable=True)
     admin_hq = db.Column(db.String(length=250), nullable=True)
