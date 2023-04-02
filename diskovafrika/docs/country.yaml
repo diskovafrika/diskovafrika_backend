@@ -1,41 +1,14 @@
-Creates a new user in the Database
+Gets all Countries in the Database
 ---
 tags:
   - Country
+
 parameters:
-  - name: body
-    in: body
-    description: The body should contain xxx
+  - in: path
+    name: name_capital
+    type: string
     required: true
-    schema:
-      type: object
-      required:
-        - "name"
-        - "email"
-        - "password"
-        - "gender"
-      properties:
-        name:
-          type: "string"
-          description: "Username"
-          example: "user"
-        email:
-          type: "email"
-          description: "email address"
-          example: "user@gmail.com"
-        password:
-          type: "string"
-          description: "desired password"
-          format: password
-          example: "********"
-        gender:
-          type: "string"
-          enum: ["Male", "Female"]
-          description: "User's sex / gender"
-          example: "Male"
 
 responses:
   200:
-    description: New user successfully created
-  400:
-    description: Fails due to bad request data
+    description: Successful

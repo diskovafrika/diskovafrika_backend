@@ -1,4 +1,4 @@
-Creates a new user in the Database
+Gets all users in the Database
 ---
 tags:
   - Users

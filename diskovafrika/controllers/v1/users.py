@@ -5,7 +5,7 @@ from diskovafrika.utils.utils import custom_response, error_response
 from flasgger import swag_from
 
 
-@swag_from('../../docs/all_users.yaml')
+@swag_from('../../docs/users_all.yaml')
 def all_users():
     """Returns all users in storage"""
     all_user = UserRepo.all_users()

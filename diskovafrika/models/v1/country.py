@@ -1,21 +1,11 @@
 """Country Model"""
 
-from datetime import datetime
 from uuid import uuid4
 from diskovafrika.configs.extensions import db
 from sqlalchemy import Enum
-import enum
-
-from diskovafrika.utils.utils import error_response
 
 
-class TimeZone(enum.Enum):
-    GMT__1 = -1
-    GMT_0 = 0
-    GMT_1 = 1
-    GMT_2 = 2
-    GMT_3 = 3
-    GMT_4 = 4
+timezones = ("-1", "0", "1", "2", "3", "4")
 
 
 class Country(db.Model):
@@ -26,9 +16,9 @@ class Country(db.Model):
     name = db.Column(db.String(length=250), nullable=False, unique=True)
     capital = db.Column(db.String(length=250), nullable=False)
     iso_code = db.Column(db.String(4))
-    date_of_independence = db.Column(db.DateTime)
+    date_of_independence = db.Column(db.Date)
     country_code = db.Column(db.Integer, nullable=False)
-    utc_zone = db.Column(Enum(TimeZone))
+    utc_zone = db.Column(Enum(*timezones))
     sub_region = db.Column(Enum(
         "Northern", "Central", "Western", "Southern", "Eastern")
     )
@@ -36,9 +26,6 @@ class Country(db.Model):
     admin_division = db.Column(db.Integer, db.ForeignKey('admin_division.id'))
     num_admin_division = db.Column(db.Integer)
     # division = db.relationship("Division", backref='div_country')
-
-
-
 
     # languages = db.relationship("CountryLanguages", backref='country_lang')
 
