@@ -1,14 +1,22 @@
 <h1 style="text-align: center;">
-	<a href=''>
-		Flask Web App Template
+	<a href='www.diskovafrika.com'>
+		DiskovAfrika
 	</a>
 </h1>
+Diskovafrika is an API and web service intended to provide information on several categories such as local dishes, music, historical books, languages, Religions, Politics etc all grouped by their countries and detailed information where necessary.
 
-Base template for Flask Web Apps
 
 ---
 
-<h2 style="text-align: center;">Author(s)</h2>
+<h2 style="text-align: center;">Collaborative Author(s)</h2>
+
+[**Trefania Vheratta**]()
+- GitHub - []()
+- Twitter - []()
+
+[**McDonald Amure**](https://www.linkedin.com/in/mcdonald-amure-348238248/)
+- GitHub - [Certifieddonnie](https://github.com/Certifieddonnie)
+- Twitter - [Certifieddonnie](https://twitter.com/CertifiedDonnie)
 
 [**Emmanuel Fasogba**](https://www.linkedin.com/in/emmanuelofasogba/)
 - GitHub - [fashemma007](https://github.com/fashemma007)
