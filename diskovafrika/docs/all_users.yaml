@@ -1,0 +1,8 @@
+Creates a new user in the Database
+---
+tags:
+  - Users
+
+responses:
+  200:
+    description: Successful

@@ -1,5 +1,5 @@
 <h1 style="text-align: center;">
-	<a href='diskovafrika.github.io'>
+	<a href='https://diskovafrika.github.io/'>
 		DiskovAfrika
 	</a>
 </h1>

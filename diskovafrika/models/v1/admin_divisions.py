@@ -9,7 +9,7 @@ class AdminDivision(db.Model):
     name = db.Column(db.String(200), nullable=True)
     created_at = db.Column(
         db.DateTime, default=datetime.utcnow, nullable=False)
-    country = db.relationship("Country", backref='admin_division')
+    country = db.relationship("Country", backref='country')
 
 
 class CountryDivision(db.Model):
