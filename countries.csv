@@ -1,0 +1,54 @@
+id,name,capital,iso_code,country_code,tz,date_of_independent,admin_div_id,admin_div,sub_region,population,,,Algeria,"43,851,044",Northern,1
+db69f4b9-b73d-4d1b-b319-a5fdb9990864,Algeria,Algiers,dz,213,1,1962-07-05,10,Province,Northern ,43851044,Northern ,,Angola,"32,866,272",Central,2
+2973889a-4852-4882-ac59-eb83c0b1c4b4,Angola,Luanda,ao,244,1,1975-11-11,10,Province,Central ,32866272,Central ,,Benin,"12,123,200",Western,3
+7a6432b5-c4c4-48ed-8cd4-5c67d67e02b2,Benin,Cotonou,bj,229,1,1960-08-01,2,Department,Western ,12123200,Western ,,Botswana,"2,351,627",Southern,4
+bc1e3590-da30-45d3-b051-28b2291d530b,Botswana,Gaborone,bw,267,2,1966-09-30,3,District,Southern ,2351627,Southern ,,Burkina Faso,"20,903,273",Western,5
+a284b15b-34b9-4973-b115-0ea3bd0908de,Burkina Faso,Ouagadougou,bf,226,0,1960-08-05,11,Region,Western ,20903273,Eastern ,,Burundi,"11,890,784",Eastern,6
+6c95a3dd-9730-48dd-a274-561bee8d0b13,Burundi,Bujumbura,bi,257,2,1962-07-01,10,Province,Eastern ,11890784,Northern,,Cameroon,"26,545,863",Central,7
+875da6ad-6362-4719-a1da-556e07eb467c,Cameroon,Yaoundé,cmr,237,1,1960-01-01,11,Region,Central ,26545863,,,Cape Verde,"555,987",Western,8
+20a3ad7e-97b6-4737-8366-cdbb17045a8f,Cape Verde,Praia,cv,238,-1,1975-07-05,6,Municipality,Western ,555987,,,Central African Republic,"4,829,767",Central,9
+e21c9b09-5ad2-41cb-8646-ab3f7ec6d6fb,Central African Republic,Bangui,caf,236,1,1960-08-13,9,Prefectures,Central ,4829767,,,Chad,"16,425,864",Central,10
+5dcd21cf-ce1e-4c8e-84ce-35181f7eb07c,Chad,N'Djamena,tcd,235,1,1960-08-11,11,Region,Central ,16425864,,,Comoros,"869,601",Eastern,11
+e3dd61de-b9c2-4efe-93ba-926f55464776,Comoros,Moroni,com,269,3,1975-07-06,11,Region,Eastern ,869601,,,Congo,"5,518,087",Central,12
+1eb5bc91-d263-4923-b184-300c3a671266,Congo,Brazzaville,cg,242,1,1960-08-15,2,Department,Central ,5518087,,,Côte d'Ivoire,"26,378,274",Western,13
+bd7e2b93-b414-4ed2-9f8a-be444a0ca077,Cote d'Ivoire,Yamoussoukro,ci,225,0,1960-08-07,3,District,Western ,26378274,,,Djibouti,"988,000",Eastern,14
+6d10a020-8f5f-4d1f-be8a-8221939cd128,DR Congo,Kinshasa,cod,243,1,1960-06-30,10,Province,Central ,89561403,,,DR Congo,"89,561,403",Central,15
+4e9f0e09-817f-4dda-a5dd-54475b609c09,Djibouti,Djibouti City,dj,253,3,1977-06-27,11,Region,Eastern ,988000,,,Egypt,"102,334,404",Northern,16
+239dd403-56bd-4218-beaf-4cb0a740fb3c,Egypt,Cairo,eg,20,2,1922-02-28,5,Governorates,Northern ,102334404,,,Equatorial Guinea,"1,402,985",Central,17
+22a6fc2e-ed81-4220-9c3a-f34f9d3d9443,Equatorial Guinea,Malabo,gq,240,1,1968-10-12,10,Province,Central ,1402985,,,Eritrea,"3,546,421",Eastern,18
+a2375dd6-602c-4753-ac1d-c31e2d179dd3,Eritrea,Asmara,er,291,3,1993-05-24,11,Region,Eastern ,3546421,,,Eswatini,"1,160,164",Southern,19
+5cdb1f2a-59b2-453f-8d15-b18fd98fbea1,Eswatini,Mbabane & Lobamba,sz,268,2,1968-09-06,11,Region,Southern ,1160164,,,Ethiopia,"114,963,588",Eastern,20
+3254568d-6f44-4b19-a02f-cdf93f3dc471,Ethiopia,Addis Ababa,et,251,3,1896-10-26,11,Region,Eastern ,114963588,,,Gabon,"2,225,734",Central,21
+3ddffb8a-f738-4bf7-a7a1-992225bebd84,Gabon,Libreville,ga,241,1,1960-08-17,11,Region,Central ,2225734,,,Gambia,"2,416,668",Western,22
+8085af25-9005-4171-8d71-34b7b1e5193f,Gambia,Banjul,gm,220,0,1965-02-18,11,Region,Western ,2416668,,,Ghana,"31,072,940",Western,23
+fba209-f612-4559-ab2b-5ce58962eddb,Namibia,Windhoek,na,264,1,1990-03-21,11,Region,Southern ,2540905,,,Guinea,"13,132,795",Western,24
+2fb7ec56-e02a-4003-a62b-87b5073b3873,Niger,Niamey,ne,227,1,1960-08-03,11,Region,Western ,24206644,,,Guinea-Bissau,"1,968,001",Western,25
+c1908c3d-4f57-4bf0-9181-fc55e5616e61,Nigeria,Abuja,ng,234,1,1960-10-01,12,State,Western ,206139589,,,Kenya,"53,771,296",Eastern,26
+78893ff7-1792-4ba5-8abe-5b2a1a38efb5,Rwanda,Kigali,rw,250,2,1962-07-01,10,Province,Eastern ,12952218,,,Lesotho,"2,142,249",Southern,27
+cd71e267-fcf0-45ae-86cd-cbb9fce98109,Sao Tome & Principe,São Tomé,st,239,0,1975-07-12,3,District,Central ,219159,,,Liberia,"5,057,681",Western,28
+c1f6a56c-cc5d-4537-a1d7-239a3c0ee8c6,Senegal,Dakar,sn,221,0,1960-04-04,11,Region,Western ,16743927,,,Libya,"6,871,292",Northern,29
+75983969-9177-4df0-9012-6074c3f8a0ff,Seychelles,Victoria,sc,248,4,1976-06-29,3,District,Eastern ,98347,,,Madagascar,"27,691,018",Eastern,30
+95ae072b-a7ef-484b-b680-d0463c7c97ca,Sierra Leone,Freetown,sl,232,0,1961-04-27,10,Province,Western ,7976983,,,Malawi,"19,129,952",Eastern,31
+b8466689-18c3-4601-8251-9fa4c928df07,Somalia,Mogadishu,so,252,3,1960-07-01,11,Region,Eastern ,15893222,,,Mali,"20,250,833",Western,32
+9db402eb-19a6-4d9f-8600-c914e8424d40,South Africa,Pretoria,za,27,2,1910-05-31,10,Province,Southern ,59308690,,,Mauritania,"4,649,658",Western,33
+63ebb937-bcc6-4457-9638-6d1e0f9a7e4b,South Sudan,Juba,ss,211,2,2011-07-09,12,State,Eastern ,11193725,,,Mauritius,"1,271,768",Eastern,34
+0a4b5c8a-9c3a-488b-95ab-baace257afda,Sudan,Khartoum,sd,249,2,1956-01-01,12,State,Northern,"43,849,260",,,Morocco,"36,910,560",Northern,35
+#N/A,,,,,,,,,#N/A,#N/A,,,Mozambique,"31,255,435",Eastern,36
+,,,,,,,,,,,,,Namibia,"2,540,905",Southern,37
+,,,,,,,,,,,,,Niger,"24,206,644",Western,38
+,,,,,,,,,,,,,Nigeria,"206,139,589",Western,39
+,,,,,,,,,,,,,Rwanda,"12,952,218",Eastern,40
+,,,,,,,,,,,,,Sao Tome & Principe,"219,159",Central,41
+,,,,,,,,,,,,,Senegal,"16,743,927",Western,42
+,,,,,,,,,,,,,Seychelles,"98,347",Eastern,43
+,,,,,,,,,,,,,Sierra Leone,"7,976,983",Western,44
+,,,,,,,,,,,,,Somalia,"15,893,222",Eastern,45
+,,,,,,,,,,,,,South Africa,"59,308,690",Southern,46
+,,,,,,,,,,,,,South Sudan,"11,193,725",Eastern,47
+,,,,,,,,,,,,,Sudan,"43,849,260",Northern,48
+,,,,,,,,,,,,,Tanzania,"59,734,218",Eastern,49
+,,,,,,,,,,,,,Togo,"8,278,724",Western,50
+,,,,,,,,,,,,,Tunisia,"11,818,619",Northern,51
+,,,,,,,,,,,,,Uganda,"45,741,007",Eastern,52
+,,,,,,,,,,,,,Zambia,"18,383,955",Eastern,53
+,,,,,,,,,,,,,Zimbabwe,"14,862,924",Eastern,54

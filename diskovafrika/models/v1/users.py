@@ -3,7 +3,7 @@ User class
 """
 from datetime import datetime
 from diskovafrika.configs.extensions import db
-from sqlalchemy import Enum
+from sqlalchemy import Enum, func, text
 from uuid import uuid4
 
 
@@ -16,8 +16,11 @@ class User(db.Model):
     email = db.Column(db.String(length=50), nullable=False, unique=True)
     password = db.Column(db.String(50))
     gender = db.Column(Enum("Male", "Female"))
-    created_at = db.Column(db.DateTime, default=datetime.utcnow)
-    updated_at = db.Column(db.DateTime, default=datetime.utcnow)
+    created_at = db.Column(db.DateTime, server_default=func.now())
+    updated_at = db.Column(
+        db.DateTime,
+        server_default=text("CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP")
+    )
     # state_id = db.Column(db.Integer, db.ForeignKey('state.id'))
     # TODO In states table
     # users = db.relationship("User", backref='states')
