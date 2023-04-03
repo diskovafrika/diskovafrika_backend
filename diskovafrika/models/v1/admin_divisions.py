@@ -11,7 +11,9 @@ class AdminDivision(db.Model):
     name = db.Column(db.String(200), nullable=True)
     created_at = db.Column(
         db.DateTime, server_default=func.now(), nullable=False)
-    country = db.relationship("Country", backref='country')
+    country = db.relationship("Country", lazy='dynamic', backref='countries')
+    division = db.relationship(
+        "CountryDivision", lazy='dynamic', backref='divisions')
 
 
 class CountryDivision(db.Model):

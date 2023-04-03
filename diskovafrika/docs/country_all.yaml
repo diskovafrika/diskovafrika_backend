@@ -1,0 +1,8 @@
+Gets all Countries in the Database
+---
+tags:
+  - Country
+
+responses:
+  200:
+    description: Successful

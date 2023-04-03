@@ -25,6 +25,7 @@ class Country(db.Model):
     population = db.Column(db.Integer, nullable=False)
     admin_division = db.Column(db.Integer, db.ForeignKey('admin_division.id'))
     num_admin_division = db.Column(db.Integer)
+
     # division = db.relationship("Division", backref='div_country')
 
     # languages = db.relationship("CountryLanguages", backref='country_lang')

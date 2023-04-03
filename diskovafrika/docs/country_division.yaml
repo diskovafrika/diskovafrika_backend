@@ -1,0 +1,14 @@
+Gets administrative division of countries like <country>
+---
+tags:
+  - Country
+
+parameters:
+  - in: path
+    name: country
+    type: string
+    required: true
+
+responses:
+  200:
+    description: Successful
