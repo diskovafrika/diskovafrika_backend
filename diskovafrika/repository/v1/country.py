@@ -6,6 +6,7 @@ from diskovafrika.configs.extensions import db
 from diskovafrika.models.schema.country import CountrySchema
 from diskovafrika.models.v1.admin_divisions import AdminDivision
 from diskovafrika.models.v1.country import Country
+from diskovafrika.utils.utils import error_response
 
 country_schema = CountrySchema()
 
@@ -21,16 +22,41 @@ class CountryRepo:
         return serialized_data
 
     @staticmethod
+    def get_country(name=None, div=None):
+        if name is None and div is None:
+            serialized_data = []
+        elif name and len(name) == 2:
+            country = Country.query.filter_by(iso_code=name).first()
+            serialized_data = json.loads(country_schema.dumps(country))
+        elif name and div is None:
+            country = db.session.query(
+                Country).filter(Country.name.ilike(f"{name}%")).all()
+            serialized_data = json.loads(
+                country_schema.dumps(country, many=True))
+        elif div and name is None:
+            country = db.session.query(
+                Country).filter(Country.capital.ilike(f"{div}%")).all()
+        elif div and name:
+            country = db.session.query(
+                Country).filter(Country.name.ilike(f"{name}%")).filter(Country.capital.ilike(f"{div}%")).all()
+            # print(country)
+            serialized_data = json.loads(
+                country_schema.dumps(country, many=True))
+        if serialized_data == []:
+            message = f"{name}, {div} was not found in country, capitals respectively"
+            serialized_data = error_response(message=message, status_code=400)
+        return serialized_data
+
+    @staticmethod
     def division(name):
         if name == 'all':
             country = db.session.query(
-                Country.name, AdminDivision.name).join(AdminDivision).all()
+                Country.name, AdminDivision.name, Country.num_admin_division).join(AdminDivision).all()
         else:
             country = db.session.query(
-                Country.name, AdminDivision.name).join(AdminDivision).filter(Country.name.ilike(f"{name}%")).all()
-        country_list = [{'country': ctry[0], 'division':ctry[1]}
+                Country.name, AdminDivision.name, Country.num_admin_division).join(AdminDivision).filter(Country.name.ilike(f"{name}%")).all()
+        country_list = [{'country': ctry[0], 'division_type':ctry[1], 'division_count': ctry[2]}
                         for ctry in country]
-        country_dict = {country['country']: country['division']
+        country_dict = {country['country']: f"{country['division_count']} "+country['division_type']
                         for country in country_list}
-        # print(country_dict)
         return country_dict

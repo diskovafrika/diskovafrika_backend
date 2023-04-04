@@ -1,21 +1,20 @@
 from flasgger import swag_from
+from flask import request
 from diskovafrika.models.v1.country import Country
 from diskovafrika.repository.v1.country import CountryRepo
 from diskovafrika.utils.utils import error_response, custom_response
 
 
 @swag_from('../../docs/country.yaml')
-def get_country(name_capital=None):
+def get_country():
     """Returns json object of all countries in DB"""
-    resp = {
-        'message': "test data",
-        'data': f"{name_capital}",
-        'status_code': 200
-    }
-    country = CountryRepo.division(name_capital)
-    # print(country)
-    # data = {'country': country[0][0], 'administrative_division': country[0][1]}
-    # print(data)
+    name = None
+    capital = None
+
+    name = request.args.get('name')
+    capital = request.args.get('capital')
+    # print(capital)
+    country = CountryRepo.get_country(name=name, div=capital)
     return country
 
 
