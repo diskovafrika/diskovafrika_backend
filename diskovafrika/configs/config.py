@@ -26,6 +26,7 @@ class Config(object):
         'title': "Flask API",
         'uiversion': 3
     }
+    CORS_HEADERS = 'Content-Type'
     # print(SECRET_KEY)
 
 
