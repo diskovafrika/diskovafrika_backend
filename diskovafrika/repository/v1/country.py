@@ -70,3 +70,30 @@ class CountryRepo:
         country_dict = {country['country']: f"{country['division_count']} "+country['division_type']
                         for country in country_list}
         return country_dict
+
+    @staticmethod
+    def get_country_by_yoi(yoi):
+        country = db.session.query(
+            Country.name, Country.capital, Country.date_of_independence, Country.sub_region).join(AdminDivision).filter(Country.date_of_independence.ilike(f"{yoi}%")).all()
+        # print(all)
+        country_list = [
+            {
+                'country': ctry[0], 'capital':ctry[1],
+                'date_of_independence': ctry[2], 'sub_region': f"{ctry[3]} Africa"
+            } for ctry in country
+        ]
+
+        return country_list
+
+    @staticmethod
+    def get_country_by_region(region):
+        country = db.session.query(
+            Country.name, Country.capital, Country.sub_region).filter(Country.sub_region.ilike(f"{region}%")).all()
+        country_list = [
+            {
+                'country': ctry[0], 'capital':ctry[1],
+                'sub_region': f"{ctry[2]} Africa"
+            } for ctry in country
+        ]
+
+        return country_list

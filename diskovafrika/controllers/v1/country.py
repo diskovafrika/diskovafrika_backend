@@ -8,13 +8,17 @@ from diskovafrika.utils.utils import error_response, custom_response
 @swag_from('../../docs/country_details.yaml')
 def get_country():
     """Returns detailed information of a country"""
-    name = None
-    capital = None
-
     name = request.args.get('name')
     capital = request.args.get('capital')
-    # print(capital)
-    country = CountryRepo.get_country(name=name, div=capital)
+    yoi = request.args.get('yoi')
+    region = request.args.get('region')
+    print(region)
+    if yoi is not None:
+        country = CountryRepo.get_country_by_yoi(yoi=yoi)
+    elif region:
+        country = CountryRepo.get_country_by_region(region=region)
+    else:
+        country = CountryRepo.get_country(name=name, div=capital)
     return country
 
 
