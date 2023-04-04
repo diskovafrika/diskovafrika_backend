@@ -18,6 +18,20 @@ parameters:
     required: false
     default: B
 
+  - in: query
+    name: yoi
+    type: int
+    description: Year of independence of a country
+    required: false
+    default: 1960
+
+  - in: query
+    name: region
+    type: string
+    description: Get all countries in a Sub region in Afrika
+    required: false
+    default: West
+
 responses:
   200:
     description: Successful

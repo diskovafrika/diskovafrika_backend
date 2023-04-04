@@ -12,14 +12,15 @@ def get_country():
     capital = request.args.get('capital')
     yoi = request.args.get('yoi')
     region = request.args.get('region')
-    print(region)
     if yoi is not None:
-        country = CountryRepo.get_country_by_yoi(yoi=yoi)
+        countries_by_year = CountryRepo.get_country_by_yoi(yoi=yoi)
+        return countries_by_year
     elif region:
-        country = CountryRepo.get_country_by_region(region=region)
+        countries_by_region = CountryRepo.get_country_by_region(region=region)
+        return countries_by_region
     else:
         country = CountryRepo.get_country(name=name, div=capital)
-    return country
+        return country
 
 
 @swag_from('../../docs/country_all.yaml')

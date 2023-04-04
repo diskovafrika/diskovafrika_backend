@@ -46,6 +46,7 @@ class CountryRepo:
                 serialized_data = json.loads(
                     country_schema.dumps(country, many=True))
         elif len(div) > 0 and len(name) > 0:
+            print("tada")
             country = db.session.query(
                 Country).filter(Country.name.ilike(f"{name}%")).filter(Country.capital.ilike(f"{div}%")).all()
             # print(country)
