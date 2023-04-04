@@ -22,9 +22,15 @@ class CountryRepo:
 
     @staticmethod
     def division(name):
-        country = db.session.query(
-            Country.name, AdminDivision.name).join(AdminDivision).filter(Country.name.ilike(f"{name}%")).all()
-        country_dict = [{'country': ctry[0], 'division':ctry[1]}
+        if name == 'all':
+            country = db.session.query(
+                Country.name, AdminDivision.name).join(AdminDivision).all()
+        else:
+            country = db.session.query(
+                Country.name, AdminDivision.name).join(AdminDivision).filter(Country.name.ilike(f"{name}%")).all()
+        country_list = [{'country': ctry[0], 'division':ctry[1]}
                         for ctry in country]
+        country_dict = {country['country']: country['division']
+                        for country in country_list}
         # print(country_dict)
         return country_dict

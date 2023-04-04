@@ -5,4 +5,5 @@ country_bp = Blueprint("country", __name__)
 
 country_bp.get("/")(all_countries)
 country_bp.get("/<name_capital>")(get_country)
-country_bp.get("/<country>")(country_div)
+country_bp.get("/administrative-division/<country>")(country_div)
+# country_bp.get("/region/<country>")(country_region)
