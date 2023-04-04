@@ -5,9 +5,9 @@ from diskovafrika.repository.v1.country import CountryRepo
 from diskovafrika.utils.utils import error_response, custom_response
 
 
-@swag_from('../../docs/country.yaml')
+@swag_from('../../docs/country_details.yaml')
 def get_country():
-    """Returns json object of all countries in DB"""
+    """Returns detailed information of a country"""
     name = None
     capital = None
 

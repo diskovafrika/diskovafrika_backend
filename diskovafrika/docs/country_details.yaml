@@ -1,0 +1,25 @@
+Gets all Countries in the Database
+---
+tags:
+  - Country
+
+parameters:
+  - in: query
+    name: name
+    type: string
+    description: name or iso code of a country
+    required: false
+    default: Ango
+
+  - in: query
+    name: capital
+    type: string
+    description: capital of a country
+    required: false
+    default: B
+
+responses:
+  200:
+    description: Successful
+  400:
+    description: Bad data

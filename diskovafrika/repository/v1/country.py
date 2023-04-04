@@ -15,36 +15,46 @@ class CountryRepo:
 
     @staticmethod
     def all():
-        all = Country.query.order_by("name").all()
+        all = db.session.query(
+            Country.name, Country.capital, Country.iso_code, Country.sub_region).join(AdminDivision).all()
         # print(all)
-        # serialized_data = json.loads(all)
-        serialized_data = json.loads(country_schema.dumps(all, many=True))
-        return serialized_data
+        country_list = [
+            {
+                'country': ctry[0], 'capital':ctry[1],
+                'iso_code': ctry[2], 'sub_region': f"{ctry[3]} Africa"
+            } for ctry in all
+        ]
+
+        return country_list
 
     @staticmethod
     def get_country(name=None, div=None):
-        if name is None and div is None:
+        if (name is None or name == ""):
             serialized_data = []
-        elif name and len(name) == 2:
-            country = Country.query.filter_by(iso_code=name).first()
-            serialized_data = json.loads(country_schema.dumps(country))
-        elif name and div is None:
-            country = db.session.query(
-                Country).filter(Country.name.ilike(f"{name}%")).all()
-            serialized_data = json.loads(
-                country_schema.dumps(country, many=True))
-        elif div and name is None:
-            country = db.session.query(
-                Country).filter(Country.capital.ilike(f"{div}%")).all()
-        elif div and name:
+            if div and div != "":
+                country = db.session.query(
+                    Country).filter(Country.capital.ilike(f"{div}%")).all()
+                serialized_data = json.loads(
+                    country_schema.dumps(country, many=True))
+        elif (div is None or div == ""):
+            if name and len(name) == 2:
+                country = Country.query.filter_by(iso_code=name).first()
+                serialized_data = json.loads(country_schema.dumps(country))
+            elif name and name != "":
+                country = db.session.query(
+                    Country).filter(Country.name.ilike(f"{name}%")).all()
+                serialized_data = json.loads(
+                    country_schema.dumps(country, many=True))
+        elif len(div) > 0 and len(name) > 0:
             country = db.session.query(
                 Country).filter(Country.name.ilike(f"{name}%")).filter(Country.capital.ilike(f"{div}%")).all()
             # print(country)
             serialized_data = json.loads(
                 country_schema.dumps(country, many=True))
-        if serialized_data == []:
-            message = f"{name}, {div} was not found in country, capitals respectively"
+        if serialized_data == [] or serialized_data == {}:
+            message = f"Args was not found in country or capitals"
             serialized_data = error_response(message=message, status_code=400)
+
         return serialized_data
 
     @staticmethod
