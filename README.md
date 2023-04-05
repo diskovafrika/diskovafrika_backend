@@ -1,9 +1,12 @@
 # PROJECT NAME: [D I S K O V A F R I K A](http://www.diskovafrika.live/)
 	T h e  A f r i c a n  D a t a s e t  A P I
 
+![image](https://user-images.githubusercontent.com/129394022/230203212-fd99716f-1f34-475b-bbb4-f9f48cf66798.png)
+
 Diskovafrika is an API and web service intended to provide information on several categories such as local dishes, music, historical books, languages,
 Religions, Politics etc all grouped by their countries and detailed information where necessary.
 
+![image](https://user-images.githubusercontent.com/129394022/230203441-b3635987-8ca4-4209-8721-7657a1edd71e.png)
 
 ## INSTALLATION AND USAGES
 
