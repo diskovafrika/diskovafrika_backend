@@ -14,6 +14,13 @@ from diskovafrika.configs.swagger import template, swagger_config
 
 
 def create_app():
+    """
+    The create_app function is the main entry point for our application.
+    It creates a Flask app instance and configures it with the settings found in
+    the environment variable ENVIRONMENT, which can be either 'development' or 'production'.
+    The function also registers blueprints (which are like mini-apps) to handle different parts of our API.
+    :return: The app variable
+    """
     environ = os.getenv("ENVIRONMENT")
     app = Flask(__name__)
     cors = CORS(app, resources={r"/api/v1*": {"origins": "*"}})
