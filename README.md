@@ -26,12 +26,12 @@ Check out our [Documentation Page](http://www.diskovafrika.live/documentation.ht
 <h2 style="text-align: center;">Collaborative Author(s)</h2>
 
 [**Trefania Vheratta**](https://za.linkedin.com/in/trefania-tariro-vhareta-697842232)
-- GitHub - [](https://github.com/Trefania)
-- Twitter - [](https://twitter.com/trefania_t)
+- GitHub - [Trefania](https://github.com/Trefania)
+- Twitter - [trefania_t](https://twitter.com/trefania_t)
 
 [**McDonald Amure**](https://www.linkedin.com/in/mcdonald-amure-348238248/)
 - GitHub - [Certifieddonnie](https://github.com/Certifieddonnie)
-- Twitter - [Certifieddonnie](https://twitter.com/CertifiedDonnie)
+- Twitter - [CertifiedDonnie](https://twitter.com/CertifiedDonnie)
 
 [**Emmanuel Fasogba**](https://www.linkedin.com/in/emmanuelofasogba/)
 - GitHub - [fashemma007](https://github.com/fashemma007)
